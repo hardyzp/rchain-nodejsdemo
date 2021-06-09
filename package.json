@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-rchain",
+  "version": "0.0.1",
+  "description": "nodejs rchain lib",
+  "main": "index.js",
+  "repository": "https://github.com/rchain/exchange-api-njs",
+  "author": "RChain Coop",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^0.8.1",
+    "@tgrospic/rnode-grpc-js": "^0.8.5",
+    "big-integer": "^1.6.48",
+    "body-parser": "^1.19.0",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "google-protobuf": "^3.14.0",
+    "grpc": "^1.24.2",
+    "http": "0.0.1-security",
+    "keythereum": "^1.2.0",
+    "log4js": "^6.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "grpc-tools": "^1.11.1",
+    "protobufjs": "^6.11.2"
+  },
+  "scripts": {
+    "rnode-generate": "rnode-grpc --gen-dir lib/rnode-grpc-gen --rnode-version v0.9.24",
+    "postinstall": "npm run rnode-generate"
+  }
+}
